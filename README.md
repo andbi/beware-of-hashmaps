@@ -36,8 +36,8 @@ Be careful iterating Java's stock hash collections when using them as a long-liv
 dynamic, and high-load data storage. The iteration time over a HashMap depends 
 on its history, and it never goes down.
 
-Performance-wise, iterating over a single entry map, that previously contained a billion entries, is 
-like iterating over a billion entry map. 
+**Performance-wise, iterating over a single entry map, that previously contained a billion entries, is 
+like iterating over a billion entry map.** 
 
 Developers should read the official Javadoc on the `java.util.HashMap` as: 
 >"... Iteration over
