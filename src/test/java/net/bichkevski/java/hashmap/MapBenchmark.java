@@ -27,13 +27,13 @@ public class MapBenchmark {
         Map<Object, Object> hashMap = new HashMap<>();
 
         @Param({"1", "5", "10", "100", "1000"})
-        int strain;
+        int stress;
 
         @Setup(Level.Trial)
         public void init() {
 
             // 1. Fill the map with a large data set, ...
-            fillMap(this.hashMap, strain * OBJECT_COUNT);
+            fillMap(this.hashMap, stress * OBJECT_COUNT);
             // 2. clear it, ....
             this.hashMap.clear();
             // 3. fill it with the default number of objects, ...
