@@ -24,13 +24,14 @@ public class MapBenchmark {
 
     @State(Scope.Benchmark)
     public static class BenchmarkState {
-        Map<Object, Object> hashMap = new HashMap<>();
+        Map<Object, Object> hashMap;
 
         @Param({"1", "5", "10", "100", "1000"})
         int stress;
 
         @Setup(Level.Trial)
         public void init() {
+            hashMap = new HashMap<>();
 
             // 1. Fill the map with a large data set, ...
             fillMap(this.hashMap, stress * OBJECT_COUNT);
